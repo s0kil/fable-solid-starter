@@ -2,10 +2,10 @@ module App
 
 open Browser.Dom
 
-open Solid
-open Solid.Web
+open Fable.Solid
+open Fable.Solid.Web
 
-let App =
+let App () =
     let (count, setCount) = createSignal (0)
 
     let timer =

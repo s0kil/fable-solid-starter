@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-  entry: "./App.fs.js",
+  entry: "./src/App.fs.js",
   output: {
     filename: "main.js",
     path: path.join(__dirname, "dist"),
@@ -19,14 +19,16 @@ const config = {
       {
         test: /\.(js)x?$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            babelrc: false,
-            configFile: false,
-            presets: ["@babel/preset-env", "solid"],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              babelrc: false,
+              configFile: false,
+              presets: ["@babel/preset-env", "solid"],
+            },
           },
-        },
+        ],
       },
     ],
   },
