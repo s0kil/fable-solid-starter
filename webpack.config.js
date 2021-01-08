@@ -16,8 +16,14 @@ const config = {
   },
   module: {
     rules: [
+      // https://github.com/MangelMaxime/fulma-demo/pull/43#issuecomment-756556346
       {
-        test: /\.(js)x?$/,
+        test: /\.js$/,
+        enforce: "pre",
+        use: "source-map-loader",
+      },
+      {
+        test: /\.js$/,
         exclude: /node_modules/,
         use: [
           {

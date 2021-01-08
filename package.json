@@ -11,6 +11,7 @@
     "babel-preset-solid": "^0.23.8",
     "html-webpack-plugin": "^5.0.0-beta.4",
     "solid-js": "^0.23.9",
+    "source-map-loader": "^2.0.0",
     "webpack": "^5.12.1",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.1"
